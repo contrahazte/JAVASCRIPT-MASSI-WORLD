@@ -8,3 +8,15 @@ function printName(){
 
     console.log(printName()() )
     
+/////
+
+let hello="Hello"
+function printName(){
+    let name=" John";
+    function inner(){
+    return hello + name}
+    return inner
+    }
+
+   console.log( printName()() )
+    
