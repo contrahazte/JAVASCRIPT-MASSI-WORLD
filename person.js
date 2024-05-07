@@ -6,5 +6,6 @@ class Person{
     
     }
     }
-let ana= new Person(8,"García")
+let ana= new Person("Ana","García")
 console.log(ana)
+console.log(ana.firstName + " " + ana.lastName);
