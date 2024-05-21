@@ -1,12 +1,11 @@
-function repeat(callback,n)
+function repeat(callback)
 {
 let id=setInterval(callback,1000);
-setTimeout( ()=>clearInterval(id),1000*n);
+setTimeout( ()=>clearInterval(id),1000);
 }
 
 function sayHello(){
     console.log(" Hello ")
 }
 
-repeat(sayHello,4)
-//se ha establecido un intervalo de 4 repeticiones para no hacer un bucle infinito
+repeat(sayHello)
