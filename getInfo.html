@@ -1,0 +1,36 @@
+
+</script><html>
+
+<body>
+    <div id="container">
+        <form>
+            <div>
+                <label>First Name:</label>
+                <input type="text" class="form-input" id="firstName" value="Mario" />
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" class="form-input" id="lastName" value="Rossi" />
+            </div>
+            <div>
+                <label>Age:</label>
+                <input type="number" class="form-input" id="age" value="25" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+   
+    let formInputs = document.getElementsByClassName("form-input");
+    for (i = 0; i < formInputs.length; i++) {
+      let entries= formInputs[i];
+      if(entries){
+        console.log({id:entries.id,value:entries.value})
+      }
+    }
+
+
+</script>
