@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <div id="container" style="display: flex; align-items: center;"></div>
+  </body>
+</html>
+
+<script>
+  //title propertty and <Input Type = "Checkbox">
+  async function getInfoApi(){
+   try{ 
+    let allInfo= await fetch("https://jsonplaceholder.typicode.com/todos/4");
+    if(!allInfo.ok){new Error(`It was not possible get access to the web server`)};
+    let jsonAllInfo= await allInfo.json();
+   let container=document.getElementById("container")
+   container.innerHTML=`
+   <h1>${jsonAllInfo.title}</h1>
+   `
+let input=document.createElement("input")
+input.type="checkbox"
+input.checked=jsonAllInfo.completed
+container.appendChild(input)
+  }catch{(error)=>{console.error(error)}}
+}
+  getInfoApi()
+</script>
