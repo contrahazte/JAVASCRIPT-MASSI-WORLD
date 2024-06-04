@@ -1,0 +1,33 @@
+<html>
+
+<body>
+  <div id="container" style="display: flex; align-items: center;"></div>
+</body >
+
+</html>
+<script>
+  async function todos() {
+
+    let url = "https://jsonplaceholder.typicode.com/todos"
+    try {
+      let jsonDoc = await fetch(url)
+      if (!jsonDoc.ok) {
+        throw new Error(`no page was founded in ${"https://jsonplaceholder.typicode.com/todos"}`);
+      }
+      let dataDoc = await jsonDoc.json();
+      let container = document.getElementById("container")
+      let ul = document.createElement("ul")
+      container.appendChild(ul)
+     ul.innerText = "HERE ALL THE TITLES FROM API`S WEB :"
+     ul.id = "ul"
+      let list = dataDoc.forEach(a => {
+        let li = document.createElement("li");
+        li.textContent = a.title;
+        ul.appendChild(li);
+      });
+    }
+    catch { (error) => console.log(error) }
+
+  }
+  todos()
+</script>
