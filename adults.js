@@ -1,3 +1,10 @@
+// Create a function called adultFilter that takes in an array of people and returns the ones who are of age.
+
+function adultFilter(persons) {
+
+return persons.filter((a)=>a=a.age>=18)
+}
+
 const persons = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
@@ -10,6 +17,8 @@ const persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
-let adults=persons.filter( p=> p.age >= 18 )
-console.log(adults)
+
+const adults = adultFilter(persons);
+console.log(persons);
+console.log(adults);
 
