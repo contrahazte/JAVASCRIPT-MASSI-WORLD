@@ -3,7 +3,7 @@
 const order = {
     customer:{
         address:{
-            city:"Málaga"
+            pasota:"Málaga"
             }}};
 
 // if (order && order.customer && order.customer.address && !order.customer.address.city) {
