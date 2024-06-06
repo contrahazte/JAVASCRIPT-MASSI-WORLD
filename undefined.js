@@ -12,4 +12,4 @@ const order = {
   if (order.customer.address.city===undefined) {
     console.log('City is required');
   }
-    else{console.log(Object.values(order.customer.address))}
+  else{console.log("the order is getting to "+ (order.customer.address.city))}
