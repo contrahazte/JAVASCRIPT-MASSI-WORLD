@@ -1,5 +1,7 @@
-function sum(...numbers) {
-    return numbers.reduce((a,b)=>a+b,0);
+
+function sum(some) {
+  return [...some].reduce((a,b)=>{return a+b})
 }
 
-console.log(sum(1, 2, 3, 4, 5));
+const numbers = [1, 2, 3];
+console.log(sum(numbers));
